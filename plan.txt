@@ -6,6 +6,11 @@ npm i dotenv
 npm i nodemon
 npm i CORS
 
+Testing the routes/paths;
+    - GET by Topic
+    - POST new link
+    - GET by most up voted
+    - PATCH - to update voteCount
 
 database folder:
 --scripts:
@@ -23,8 +28,8 @@ app.js - listneing on port
 models: 
   Functions to handle route request and SQL statements to database
   - GET by Topic
-  - GET by most up voted
   - POST new link
+  - GET by most up voted
   - PATCH - to update voteCount
 
 routes:
@@ -35,4 +40,3 @@ routes:
 Herotu database set up
     - environment variables 
     - table strucutre - columns: id, link, userName, voteCount,
-    
