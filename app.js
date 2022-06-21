@@ -11,8 +11,8 @@ app.use(logger('dev'))
 app.use(express.json())
 
 app.use("/",router)
-// app.listen(PORT, function(){
-// console.log (`Hello from the server on ${PORT}`)
-// });
+app.listen(PORT, function(){
+console.log (`Hello from the server on ${PORT}`)
+});
 
 export default app

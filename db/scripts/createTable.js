@@ -1,4 +1,4 @@
-import pool from '../index'
+import query from '../index'
 import 'dotenv/config'
 
 
@@ -11,7 +11,8 @@ const sqlStr = `CREATE TABLE IF NOT EXISTS tech_library (
     );`;
 
 async function createTable(){
-    const response = await pool.query(sqlStr)
+    const response = await query(sqlStr)
     console.log (response)
-    }
-    createTable()
+};
+
+createTable()
