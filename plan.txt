@@ -7,21 +7,21 @@ npm i nodemon✅
 npm i CORS
 
 Testing the routes/paths;
-    - GET by Topic
-    - POST new link
+    - GET by Topic✅
+    - POST new link✅
     - GET by most up voted
     - PATCH - to update voteCount
 
-database folder:
+database folder:✅
 --scripts:
-      - create table
+      - create table✅
       - populate table
       - drop table
-    - index.js - connect to pool
+    - index.js - connect to pool✅
 
-.env file for database credentials
+.env file for database credentials✅
 
-app.js - listneing on port
+app.js - listneing on port✅
     - export defulat App
     - more app.listening to server.js (to allow testing of app)
 
@@ -34,9 +34,14 @@ models:
 
 routes:
   app.get("/")=> link to the functions in models
+  app.post("/") = in progress
+
+  app.get all 
+  app.get by the highest entry
+  app.patch to up date the voteCount
 
 
 
-Herotu database set up
+Herotu database set up✅
     - environment variables 
     - table strucutre - columns: id, link, userName, voteCount,
