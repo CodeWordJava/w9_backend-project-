@@ -6,7 +6,7 @@ import { test, expect } from "@jest/globals";
 
 
 
-describe("Testing GET route, checks status code is 200", () => {
+describe("Testing GET route, checks status code is 200.", () => {
   
   test("Should respond with status code is 200", async () => {
     //Act:
