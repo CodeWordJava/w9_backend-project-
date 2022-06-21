@@ -1,17 +1,17 @@
-import query from '../index'
+import pool from '../index'
 import 'dotenv/config'
 
 
-const sqlStr = `CREATE TABLE IF NOT EXISTS tech_library (
+const sqlStr = `CREATE TABLE IF NOT EXISTS react (
 	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
     topic TEXT,
     link TEXT,
     userName TEXT,
-    voteCount INT,
-    );`;
+    voteCount INT
+    );`
 
 async function createTable(){
-    const response = await query(sqlStr)
+    const response = await pool.query(sqlStr)
     console.log (response)
 };
 

@@ -13,9 +13,9 @@ import 'dotenv/config' //makes .env work
     ssl:{ rejectUnauthorized: false },
 });
 
-function query(test,params,callback){
-    return pool.query(test,params,callback)
-};
+// function query(test,params,callback){
+//     return pool.query(test,params,callback)
+// };
 
 // pool.query('SELECT NOW()', (err, res) => {
 //     console.log(err, res)
@@ -23,4 +23,4 @@ function query(test,params,callback){
 //   })
 
 //export default query
-export default query;
+export default pool;
