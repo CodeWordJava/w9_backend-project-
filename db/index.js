@@ -10,12 +10,12 @@ import 'dotenv/config' //makes .env work
     database: process.env.PGDATABASE,
     password: process.env.PGPASSWORD,
     port: process.env.PGPORT,   
-    ssl:{rejectUnauthorized:false} 
-})
+    ssl:{ rejectUnauthorized: false },
+});
 
 // function query(test,params,callback){
 //     return pool.query(test,params,callback)
-// }
+// };
 
 // pool.query('SELECT NOW()', (err, res) => {
 //     console.log(err, res)
@@ -23,4 +23,4 @@ import 'dotenv/config' //makes .env work
 //   })
 
 //export default query
-export default pool
+export default pool;
