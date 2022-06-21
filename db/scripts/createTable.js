@@ -1,4 +1,4 @@
-import pool from '../index'
+import pool from '../index.js'
 import 'dotenv/config'
 
 
@@ -7,8 +7,8 @@ const sqlStr = `CREATE TABLE IF NOT EXISTS tech_library (
     topic TEXT,
     link TEXT,
     userName TEXT,
-    voteCount INT,
-    );`;
+    voteCount INT
+    );`
 
 async function createTable(){
     const response = await pool.query(sqlStr)
