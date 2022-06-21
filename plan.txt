@@ -1,0 +1,38 @@
+Server:
+npm i express
+npm i pg
+npm i morgan
+npm i dotenv
+npm i nodemon
+npm i CORS
+
+
+database folder:
+--scripts:
+      - create table
+      - populate table
+      - drop table
+    - index.js - connect to pool
+
+.env file for database credentials
+
+app.js - listneing on port
+    - export defulat App
+    - more app.listening to server.js (to allow testing of app)
+
+models: 
+  Functions to handle route request and SQL statements to database
+  - GET by Topic
+  - GET by most up voted
+  - POST new link
+  - PATCH - to update voteCount
+
+routes:
+  app.get("/")=> link to the functions in models
+
+
+
+Herotu database set up
+    - environment variables 
+    - table strucutre - columns: id, link, userName, voteCount,
+    
