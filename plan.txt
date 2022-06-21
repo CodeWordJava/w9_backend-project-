@@ -1,9 +1,9 @@
 Server:
-npm i express
-npm i pg
-npm i morgan
-npm i dotenv
-npm i nodemon
+npm i express✅
+npm i pg✅
+npm i morgan✅
+npm i dotenv✅
+npm i nodemon✅
 npm i CORS
 
 Testing the routes/paths;

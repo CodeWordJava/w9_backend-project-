@@ -1,0 +1,23 @@
+{
+  "name": "w9_backend-project-team-is-undefined",
+  "version": "1.0.0",
+  "description": "For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SchoolOfCode/w9_backend-project-team-is-undefined.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SchoolOfCode/w9_backend-project-team-is-undefined/issues"
+  },
+  "homepage": "https://github.com/SchoolOfCode/w9_backend-project-team-is-undefined#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
