@@ -2,11 +2,11 @@ import pool from '../index.js'
 import 'dotenv/config'
 
 
-const sqlStr = `CREATE TABLE IF NOT EXISTS react (
+const sqlStr = `CREATE TABLE IF NOT EXISTS tech-links (
 	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
-    topic TEXT,
     link TEXT,
     userName TEXT,
+    topic TEXT,
     voteCount INT
     );`
 
