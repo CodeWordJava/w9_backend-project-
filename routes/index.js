@@ -6,7 +6,7 @@ const router = Router()
 
 // basic GET route request from front-end
 router.get('/',async (req,res)=>{
-    res.json()
+    res.json({link: "https://example.org/bottle.php#bone", userName: "Jase Pruitt", topic: "CSS"});
 });
 
 
