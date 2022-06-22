@@ -2,6 +2,7 @@ import pool from '../index.js'
 import 'dotenv/config'
 
 
+
 const sqlStr = `CREATE TABLE IF NOT EXISTS tech_links (
 	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
     link TEXT,
