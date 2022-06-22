@@ -1,6 +1,6 @@
 import { Router } from "express";
 //import models( get by topic..)
-import  getEverything  from "../models/index.js";
+import  { getEverything, createNewEntry }  from "../models/index.js";
 const router = Router()
 
 
@@ -30,11 +30,13 @@ router.post('/', async (req, res) => {
 //     // if null or empty string is given it will still POST to the database
 //     // an if statement to catch bad/error data entries?
     
-    // const userName = req.body.userName;
-    // const link = req.body.link;
-    // const topic = req.body.topic;
-    const result = {link: "hobby", userName: "ali", topic: "react"};
-
+    const userName = req.body.userName;
+    const link = req.body.link;
+    const topic = req.body.topic;
+    
+    const result = await createNewLink(userName, link, topic);
+    res.json({success: true, data: result});
+});
      // console.log(`This is the result: ${result}`);
 //     res.json({success: true, payload: result});
 
@@ -46,8 +48,9 @@ router.post('/', async (req, res) => {
 //       success: true,
 //       payload: createdUser,
     // res.sendStatus(201);
-    res.json(result);
-});
+    
+    // console.log(`This is the result: ${result}`);
+    
 
 //PATCH ropute to update the voteCount on database
 // PATCH 
