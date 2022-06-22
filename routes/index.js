@@ -1,6 +1,6 @@
 import { Router } from "express";
 //import models( get by topic..)
-import  { getEverything, createNewEntry }  from "../models/index.js";
+import  { getEverything, createNewLink, getByTopic }  from "../models/index.js";
 const router = Router()
 
 
@@ -11,16 +11,20 @@ const router = Router()
 //GET everything route
 //      returns everything from the database
 router.get("/everything", async (req, res) => {
-    const resObject = await getEverything()
-    console.log (resObject)
-    res.json({ success: true, data: resObject});
+    const searchTopic = req.query.topic;
+    if (searchTopic){
+      const result = await getByTopic(searchTopic);
+      res.json({Success: true, data: result});
+    } else {  
+        const resObject = await getEverything()
+        // console.log (resObject)
+        res.json({ success: true, data: resObject});
+    }; 
 });
 // basic GET route request from front-end
-router.get('/',async (req,res)=>{
-    res.json({link: "https://example.org/bottle.php#bone", userName: "Jase Pruitt", topic: "CSS", votCount: 2});
-});
-
-
+// router.get('/',async (req,res)=>{
+//     res.json({link: "https://example.org/bottle.php#bone", userName: "Jase Pruitt", topic: "CSS", votCount: 2});
+// });
 
 
 // POST route to take in json object from front-end
