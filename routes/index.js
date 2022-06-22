@@ -1,6 +1,6 @@
 import { Router } from "express";
 //import models( get by topic..)
-import { getEverthing } from "../models";
+import  getEverything  from "../models/index.js";
 const router = Router()
 
 
@@ -11,8 +11,9 @@ const router = Router()
 //GET everything route
 //      returns everything from the database
 router.get("/everything", async (req, res) => {
-    const resObject = {success: true, data: getEverything()}
-    res.json(resObject);
+    const resObject = await getEverything()
+    console.log (resObject)
+    res.json({ success: true, data: resObject});
 });
 // basic GET route request from front-end
 router.get('/',async (req,res)=>{
