@@ -28,7 +28,7 @@ router.get("/everything", async (req, res) => {
 
 
 // POST route to take in json object from front-end
-router.post('/', async (req, res) => {
+router.post('/create', async (req, res) => {
 
     // there is a bug here
 //     // if null or empty string is given it will still POST to the database
