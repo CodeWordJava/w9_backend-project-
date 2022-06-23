@@ -21,3 +21,12 @@ export async function createNewLink(userName, link, topic){
   // console.log(`This is the returning data ${data}`);
   return data;
 };
+
+export async function updateVoteCount(id) {
+  const sqlString = "UPDATE tech_links SET votecount = votecount + 1 WHERE id = $1;"
+  const values = [id];
+  console.log(`This from the models ${id}`)
+  const data = await pool.query(sqlString, values);
+  console.log(`This the data returned from sql string ${data}`);
+  return data;
+}
