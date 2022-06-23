@@ -37,7 +37,7 @@ router.post('/create', async (req, res) => {
     const userName = req.body.userName;
     const link = req.body.link;
     const topic = req.body.topic;
-    
+    console.log(req.body)
     const result = await createNewLink(userName, link, topic);
     res.json({success: true, data: result});
 });
