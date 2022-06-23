@@ -16,7 +16,7 @@ export async function getByTopic(topic) {
 
 export async function createNewLink(userName, link, topic){
   const sqlString = "INSERT INTO tech_links (userName, link, topic, votecount) VALUES ($1, $2, $3, $4) RETURNING *;"
-  const values = [userName, link, topic, 0]
+  const values = [userName, link, topic, 1]
   const data = await pool.query(sqlString, values);
   // console.log(`This is the returning data ${data}`);
   return data;

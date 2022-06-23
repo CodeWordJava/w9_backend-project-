@@ -22,17 +22,17 @@ describe("Testing GET route", () => {
     const actual = response.body;
     const expected = {
       success: true,
-      data: ([
+      data: (expect.arrayContaining([
         {
           id:expect.any(Number),
           link:expect.any(String),
           topic:expect.any(String), 
           username:expect.any(String),
           votecount:expect.any(Number)
-        }
-      ])
+        }])
+      )
     };
-    expect(actual).expect.arrayContaining(expected);
+    expect(actual).toEqual(expected);
   }
   
 )});
