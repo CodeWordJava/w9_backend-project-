@@ -1,6 +1,6 @@
 import { Router } from "express";
 //import models( get by topic..)
-import  { getEverything, createNewLink, getByTopic }  from "../models/index.js";
+import  { getEverything, createNewLink, getByTopic, updateVoteCount }  from "../models/index.js";
 const router = Router()
 
 
@@ -54,15 +54,19 @@ router.post('/create', async (req, res) => {
 //     const { username } = req.body;
 //     const createdUser = await usersModel.createUser({ username });
   
-//     res.status(201).json({
-//       success: true,
-//       payload: createdUser,
-    // res.sendStatus(201);
+router.patch("/updatedvote", async (req, res) => {
+    const idToPatch = req.body.id;
+    console.log(`id number from req.body ${idToPatch}`);
+    if (!idToPatch){
+        res.json({sucess: false, reason: "no id number given"});
+    } else {
+        const result = await updateVoteCount(idToPatch);
+        res.json({success: true, data: result});
+    }
+});
     
-    // console.log(`This is the result: ${result}`);
-    
-
-//PATCH ropute to update the voteCount on database
+//   body: JSON.stringify({id: `${id}`})
+// PATCH ropute to update the voteCount on database
 // PATCH 
 //      voteCount++
 
