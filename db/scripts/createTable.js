@@ -8,7 +8,7 @@ const sqlStr = `CREATE TABLE IF NOT EXISTS tech_links (
     link TEXT,
     userName TEXT,
     topic TEXT,
-    voteCount INT
+    votecount INT
     );`
 
 async function createTable(){
