@@ -28,11 +28,11 @@ describe("Testing GET route", () => {
           link:expect.any(String),
           topic:expect.any(String), 
           username:expect.any(String),
-          votecount:expect.toMatch(null)
+          votecount:expect.any(Number)
         }
       ])
     };
-    expect(actual).toEqual(expected);
+    expect(actual).expect.arrayContaining(expected);
   }
   
 )});

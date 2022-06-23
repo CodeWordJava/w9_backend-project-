@@ -38,8 +38,12 @@ router.post('/create', async (req, res) => {
     const link = req.body.link;
     const topic = req.body.topic;
     console.log(req.body)
-    const result = await createNewLink(userName, link, topic);
-    res.json({success: true, data: result});
+    if (!userName || !link || !topic) {
+        throw new err;
+    } else {
+        const result = await createNewLink(userName, link, topic);
+        res.json({success: true, data: result});
+    }
 });
      // console.log(`This is the result: ${result}`);
 //     res.json({success: true, payload: result});
