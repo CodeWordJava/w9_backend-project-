@@ -1,9 +1,10 @@
+import cors from 'cors';
 import express, { Router } from "express";
 import logger from 'morgan'
 import router  from "./routes/index.js";
 const PORT = process.env.port || 9000;
 const app = express();
-import cors from 'cors';
+
 //import 'dovenv/config'
 app.use(cors())
 
