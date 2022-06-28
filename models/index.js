@@ -1,12 +1,13 @@
 import pool from "../db/index.js";
 import "dotenv/config";
 
+//not currently used in routes, allows for future implementation
 export async function getEverything() {
   const sqlString = `SELECT * FROM tech_links;`;
   const response = await pool.query(sqlString);
   return response.rows;
 }
-
+//not currently used in routes, allows for future implementation
 export async function getByTopic(topic) {
   const sqlString = `SELECT * FROM tech_links WHERE topic LIKE $1;`;
   const values = [topic];

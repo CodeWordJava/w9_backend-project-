@@ -28,10 +28,10 @@ describe("Testing GET route", () => {
     };
     expect(actual).toEqual(expected);
   });
-})
+});
 
 describe("POST should have three params: status code is 201", () => {
-  test("Should return status code is 201", async () => {
+  test("Should return status code 201", async () => {
     //Arrange.
     const response = await request(app).post("/create");
     //Act.
