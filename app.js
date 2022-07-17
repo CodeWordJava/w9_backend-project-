@@ -3,7 +3,7 @@ import express, { Router } from "express";
 import logger from "morgan";
 import router from "./routes/index.js";
 
-const PORT = process.env.port || 9000;
+const PORT = process.env.port || 3000;
 const app = express();
 
 //import 'dovenv/config'
