@@ -1,5 +1,5 @@
 import pool from "../index.js";
-import "dotenv/config";
+//import "dotenv/config";
 
 //creating a table
 const sqlStr = `CREATE TABLE IF NOT EXISTS tech_links (

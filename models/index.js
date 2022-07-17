@@ -1,5 +1,5 @@
 import pool from "../db/index.js";
-import "dotenv/config";
+//import "dotenv/config";
 
 //not currently used in routes, allows for future implementation
 export async function getEverything() {
