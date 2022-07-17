@@ -3,7 +3,7 @@ import express, { Router } from "express";
 import logger from "morgan";
 import router from "./routes/index.js";
 
-const PORT = process.env.port || 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 //import 'dovenv/config'
@@ -18,6 +18,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/", router);
+
+
 app.listen(PORT, function () {
   console.log(`Hello from the server on ${PORT}`);
 });
